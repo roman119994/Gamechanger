@@ -101,6 +101,7 @@
       <RootComponent type="9" schemaName="new_roundtypechoices" behavior="0" />
       <RootComponent type="9" schemaName="new_teamfinish" behavior="0" />
       <RootComponent type="9" schemaName="new_verificationstatus" behavior="0" />
+      <RootComponent type="9" schemaName="new_votertype" behavior="0" />
       <RootComponent type="9" schemaName="new_votestatuschoices" behavior="0" />
       <RootComponent type="9" schemaName="new_votetypechoices" behavior="0" />
     </RootComponents>
