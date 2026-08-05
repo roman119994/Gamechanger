@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{925047be-6ec8-44aa-ae39-e3438eee5ffa}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_judgename" select="1" icon="1" preview="1">
+        <row name="result" id="new_judgeid">
+          <cell name="new_judgename" width="300" />
+          <cell name="new_email" width="150" />
+          <cell name="new_accesscode" width="150" />
+          <cell name="new_active" width="150" />
+          <cell name="new_judgerole" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_judge">
+          <attribute name="new_judgeid" />
+          <attribute name="new_judgename" />
+          <attribute name="createdon" />
+          <order attribute="new_judgename" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="new_email" />
+          <attribute name="new_accesscode" />
+          <attribute name="new_active" />
+          <attribute name="new_judgerole" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Judges" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

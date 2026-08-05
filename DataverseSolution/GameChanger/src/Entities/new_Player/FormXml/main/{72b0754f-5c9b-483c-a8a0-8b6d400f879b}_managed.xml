@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{72b0754f-5c9b-483c-a8a0-8b6d400f879b}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{34404CE5-EDA3-4562-854B-21FC8A4E8CD8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4A1A0998-BA3D-424E-9741-F6385372EFBF}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6F1CD568-43A0-469C-9D65-F09FEA0DF77B}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_playername" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_PlayerName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{AC875C8D-87B3-4379-97A1-39E88C8D5F73}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{364f4660-84f8-4d2c-b92c-88db0824b439}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_playerphoto" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_playerphoto" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f3a1d2d6-c4f3-43fa-9e7b-8f48a3f7b7d3}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_gender" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_gender" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{86ade943-14b5-4436-9783-433a22440982}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_graduationyear" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="new_graduationyear" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{959e9855-6265-4e01-bede-b7f03b72244c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_homecity" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_homecity" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{059f7835-fa0a-428b-ae69-45241f131d1c}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_active" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="new_active" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

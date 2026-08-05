@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{94ba7d41-6cf0-4c91-baf4-8668a1aa2fe7}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_resultname" select="1" icon="1" preview="1">
+        <row name="result" id="new_resultid">
+          <cell name="new_resultname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_result">
+          <attribute name="new_resultid" />
+          <attribute name="new_resultname" />
+          <attribute name="createdon" />
+          <order attribute="new_resultname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="new_resultname" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Results" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

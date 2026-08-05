@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{61bf55b5-1773-f111-ab0e-70a8a59c4bab}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{7E9C380D-EDA3-4CC1-8799-FEB54812BC61}" IsUserDefined="1" labelid="{9789bd79-b4d4-425e-808a-b8d9b0237e30}">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4D88C6DC-91BE-43C7-8D82-6394A124FDAC}" labelid="{a07a58ca-5fd4-40f5-b106-3d927ea45044}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{DE2A5630-D613-4BDB-955A-FE1A1450E666}" labelid="{31b83135-ce52-4666-9ac2-a657d387b3de}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_organizationname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_OrganizationName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83D56285-ACEF-487C-ACEF-B7EBEAFA3DFE}" labelid="{13e477ac-8be2-4de8-b061-7446cae61ac8}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{24d7a52c-133b-4c05-9c4c-bdaeaec36428}" labelid="{6f1cc9af-0ced-4adc-9442-cbea3fc3eba3}">
+                        <labels>
+                          <label description="Street Address" languagecode="1033" />
+                        </labels>
+                        <control id="new_streetaddress" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_streetaddress" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b257fd3d-4ed9-4ebc-8e91-56a3183ba983}" labelid="{b122e02e-4e26-4f90-99f0-e6a40439cecb}">
+                        <labels>
+                          <label description="City" languagecode="1033" />
+                        </labels>
+                        <control id="new_city" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_city" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{44a29dcb-36df-45f1-81c7-9f34740a8479}" labelid="{33940ad1-56ac-4e42-8631-dff421a8f089}">
+                        <labels>
+                          <label description="State" languagecode="1033" />
+                        </labels>
+                        <control id="new_state" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_state" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{27bd67c6-c365-4e16-9f49-1daa284dcd04}" labelid="{eb2c5090-747b-4590-9de7-4709ab79172f}">
+                        <labels>
+                          <label description="Zip Code" languagecode="1033" />
+                        </labels>
+                        <control id="new_zipcode" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_zipcode" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{69e8d062-2c1b-419f-b53c-393ccffc83d3}" labelid="{9b5a7da4-3fa6-465e-a06f-2e1c050e514c}">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                        </labels>
+                        <control id="new_country" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_country" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a8b76e44-9b7a-4e37-aa0c-b6e7aa88adf7}" labelid="{b4948ce1-b6b5-411e-99ad-e545d4494f1c}">
+                        <labels>
+                          <label description="Google Place ID" languagecode="1033" />
+                        </labels>
+                        <control id="new_googleplaceid" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_googleplaceid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e9297792-eb36-487c-b526-4e2b3f9b37ca}" labelid="{9f5f2ad8-3a04-4ab5-8ce2-3ce6d42be953}">
+                        <labels>
+                          <label description="Address Verified" languagecode="1033" />
+                        </labels>
+                        <control id="new_addressverified" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="new_addressverified" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1bf42d72-d3bd-44d3-af32-a3a93a888efe}" locklevel="0" colspan="1" rowspan="1" labelid="{a44142ce-897b-4d3e-8601-da4d7c5eb7e2}">
+                        <labels>
+                          <label description="Organization Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_organizationname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_organizationname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{47078c3c-ffcf-400f-9153-1c48e9c9290a}" locklevel="0" colspan="1" rowspan="1" labelid="{dd029689-560e-4c6e-bd36-71cd585e44cf}">
+                        <labels>
+                          <label description="Organization Email" languagecode="1033" />
+                        </labels>
+                        <control id="new_organizationemail" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="new_organizationemail" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1fbf42b2-3c91-467d-9867-e05466993d58}" locklevel="0" colspan="1" rowspan="1" labelid="{44c2316c-abe3-4131-887c-4d95ee6c4e4e}">
+                        <labels>
+                          <label description="Organization Type" languagecode="1033" />
+                        </labels>
+                        <control id="new_organizationtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="new_organizationtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{640de0d6-cf1f-4fc5-9742-e7851c1244d7}" locklevel="0" colspan="1" rowspan="1" labelid="{76413adb-46e4-4e1b-8b4a-baa10b741b22}">
+                        <labels>
+                          <label description="Organization Phone" languagecode="1033" />
+                        </labels>
+                        <control id="new_organizationphone" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="new_organizationphone" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{aca5623c-e5ae-45bf-b123-babb6e89ed8f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f497e3cd-8cf5-4d5f-903e-dcf3f50ebe31}" showlabel="false" labelid="{769ce715-273c-4506-a9a4-48b3001bc286}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0fe71e53-4bc0-4501-9144-ece021c8d300}" showlabel="false" labelid="{cf009fa7-5892-4a5a-894a-7bbca7de7779}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0fef9b0c-32cd-4d99-b83f-3d23d3d3eb09}" showlabel="false" labelid="{44f01545-6cc4-4e82-a61e-a1b0a2c51e92}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{d42b1613-7620-46a4-8636-da2a292a86ce}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f14ce864-8c2a-4e93-897a-4607a99050ad}" showlabel="false" labelid="{3adc1718-ee0a-4c14-9cc4-41cd13cad654}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6069bcf1-b02c-45d0-9b45-24a21e2a7690}" showlabel="false" labelid="{2be77494-e399-4ac2-8293-3ad97b3d6126}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{49315043-8907-4375-8f38-aa0f239f380d}" showlabel="false" labelid="{adb996a8-6622-4282-aebf-dcb3f729eb6b}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="4" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Organization Registration" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Organization info" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b774343e-525a-4875-b863-b5a77688d1ae}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{2409ACBB-9530-4A68-8B90-FB5325A10453}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4C2C9310-9BBB-4ED4-A03E-75D3E2836D97}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{BC9E0235-F218-4DA9-B5B7-0D7723040345}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_judgename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_JudgeName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{667AEE96-6036-4739-ACF2-CDC9C2A7D31A}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b183bde3-e482-42f7-910a-5ed47cc33901}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_email" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_email" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7746e3a2-6156-4e23-a44e-baf86f226bec}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_accesscode" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_accesscode" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{483f38db-c8cc-4299-946b-21809c4772fd}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_active" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="new_active" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{418bc373-8288-4748-a5ac-facb4711f756}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_judgerole" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_judgerole" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

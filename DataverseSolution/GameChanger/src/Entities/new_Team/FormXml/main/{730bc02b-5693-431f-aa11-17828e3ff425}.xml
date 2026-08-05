@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{730bc02b-5693-431f-aa11-17828e3ff425}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{8B30C146-962B-450E-9831-AEF043BCC22D}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{027C61B9-5FC7-40F7-8C3E-C30C8FE8465D}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{051774FF-5A89-4E30-84B3-DF380FCA2EF0}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_teamname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_TeamName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{F075D43F-1F2F-439B-AF95-9E0E52C2BF0C}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{10083a5e-da72-49d5-89a7-ae8cdbfcb21c}">
+                        <labels>
+                          <label description="Tournament" languagecode="1033" />
+                        </labels>
+                        <control id="new_tournament" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="new_tournament" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{208014ef-ee46-41a7-bbda-f94fb2429694}">
+                        <labels>
+                          <label description="Division" languagecode="1033" />
+                        </labels>
+                        <control id="new_division" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="new_division" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f05f496a-b100-40de-bd7d-a3c98e8bfb0c}">
+                        <labels>
+                          <label description="Coach Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_coachname" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_coachname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2b0241ce-0ee5-41f6-ac2f-9177172a1961}">
+                        <labels>
+                          <label description="Coach Email" languagecode="1033" />
+                        </labels>
+                        <control id="new_coachemail" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_coachemail" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b6d0fa8a-f02c-495d-8ca8-c62df32fd233}">
+                        <labels>
+                          <label description="Team Status" languagecode="1033" />
+                        </labels>
+                        <control id="new_teamstatus" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_teamstatus" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

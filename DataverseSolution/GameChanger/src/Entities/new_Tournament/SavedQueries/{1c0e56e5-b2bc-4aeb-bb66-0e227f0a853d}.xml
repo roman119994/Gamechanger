@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1c0e56e5-b2bc-4aeb-bb66-0e227f0a853d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_tournamentname" select="1" icon="1" preview="1">
+        <row name="result" id="new_tournamentid">
+          <cell name="new_tournamentname" width="300" />
+          <cell name="new_startdate" width="150" />
+          <cell name="new_enddate" width="150" />
+          <cell name="new_locationname" width="150" />
+          <cell name="new_address" width="150" />
+          <cell name="new_latitude" width="150" />
+          <cell name="new_longitude" width="150" />
+          <cell name="new_georadius" width="150" />
+          <cell name="new_status" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_tournament">
+          <attribute name="new_tournamentid" />
+          <attribute name="new_tournamentname" />
+          <attribute name="createdon" />
+          <order attribute="new_tournamentname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="new_startdate" />
+          <attribute name="new_enddate" />
+          <attribute name="new_locationname" />
+          <attribute name="new_address" />
+          <attribute name="new_latitude" />
+          <attribute name="new_longitude" />
+          <attribute name="new_georadius" />
+          <attribute name="new_status" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Tournaments" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

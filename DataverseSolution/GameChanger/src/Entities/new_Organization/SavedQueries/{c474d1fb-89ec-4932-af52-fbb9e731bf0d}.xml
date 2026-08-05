@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c474d1fb-89ec-4932-af52-fbb9e731bf0d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_organizationname" select="1" icon="1" preview="1">
+        <row name="result" id="new_organizationid">
+          <cell name="new_organizationname" width="300" />
+          <cell name="new_streetaddress" width="150" />
+          <cell name="new_city" width="150" />
+          <cell name="new_state" width="150" />
+          <cell name="new_zipcode" width="150" />
+          <cell name="new_country" width="150" />
+          <cell name="new_googleplaceid" width="150" />
+          <cell name="new_addressverified" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_organization">
+          <attribute name="new_organizationid" />
+          <attribute name="new_organizationname" />
+          <attribute name="createdon" />
+          <order attribute="new_organizationname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="new_streetaddress" />
+          <attribute name="new_city" />
+          <attribute name="new_state" />
+          <attribute name="new_zipcode" />
+          <attribute name="new_country" />
+          <attribute name="new_googleplaceid" />
+          <attribute name="new_addressverified" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Organizations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

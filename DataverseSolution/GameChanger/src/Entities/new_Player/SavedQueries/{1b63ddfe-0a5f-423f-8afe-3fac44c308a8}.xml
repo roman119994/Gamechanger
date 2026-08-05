@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1b63ddfe-0a5f-423f-8afe-3fac44c308a8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_playername" select="1" icon="1" preview="1">
+        <row name="result" id="new_playerid">
+          <cell name="new_playername" width="300" />
+          <cell name="new_playerphoto" width="150" />
+          <cell name="new_gender" width="150" />
+          <cell name="new_graduationyear" width="150" />
+          <cell name="new_homecity" width="150" />
+          <cell name="new_active" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_player">
+          <attribute name="new_playerid" />
+          <attribute name="new_playername" />
+          <attribute name="createdon" />
+          <order attribute="new_playername" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="new_playerphoto" />
+          <attribute name="new_gender" />
+          <attribute name="new_graduationyear" />
+          <attribute name="new_homecity" />
+          <attribute name="new_active" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Players" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

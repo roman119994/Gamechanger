@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5e22d523-7b77-48f1-bae6-a5a30676234e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_teamname" select="1" icon="1" preview="1">
+        <row name="result" id="new_teamid">
+          <cell name="new_teamname" width="300" />
+          <cell name="new_tournament" width="150" />
+          <cell name="new_division" width="150" />
+          <cell name="new_coachname" width="150" />
+          <cell name="new_coachemail" width="150" />
+          <cell name="new_teamstatus" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_team">
+          <attribute name="new_teamid" />
+          <attribute name="new_teamname" />
+          <attribute name="createdon" />
+          <order attribute="new_teamname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="new_tournament" />
+          <attribute name="new_division" />
+          <attribute name="new_coachname" />
+          <attribute name="new_coachemail" />
+          <attribute name="new_teamstatus" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Teams" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

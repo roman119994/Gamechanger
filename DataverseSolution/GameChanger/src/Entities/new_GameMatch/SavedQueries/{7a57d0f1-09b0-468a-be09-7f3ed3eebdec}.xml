@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{7a57d0f1-09b0-468a-be09-7f3ed3eebdec}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="new_matchname" select="1" icon="1" preview="1">
+        <row name="result" id="new_gamematchid">
+          <cell name="new_matchname" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="new_gamematch">
+          <attribute name="new_gamematchid" />
+          <attribute name="new_matchname" />
+          <attribute name="createdon" />
+          <order attribute="new_matchname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Game Matches" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

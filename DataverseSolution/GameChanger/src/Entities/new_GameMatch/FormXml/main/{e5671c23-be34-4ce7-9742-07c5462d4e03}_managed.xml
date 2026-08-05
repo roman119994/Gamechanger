@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e5671c23-be34-4ce7-9742-07c5462d4e03}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{C7C664C1-CB8E-4224-8376-F7ABD8579BE3}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{F36BD84E-62C3-4574-9EF1-DDBA7463FB15}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2B1878F3-AE1C-4103-9D6F-F9CAE8D36173}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_matchname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_MatchName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9C1BDD8D-7AD3-4669-9E09-8DA69FB5008E}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cb662661-8f63-43ad-8751-a1ec962d9c90}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_matchdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="new_matchdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e94680e0-b1c3-4b97-8249-e3766de90f00}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_gamename" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_gamename" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

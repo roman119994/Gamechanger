@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{86aed259-3738-43da-9f94-369cb70a3e0d}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{AFA66D8D-5254-41B8-9B1B-FDCCDA51E9E1}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{79FE293E-5964-4129-97FE-B79B1BB28A5B}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4DCCF1EE-E391-4DF1-8B63-3EE05D5CC9F5}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_tournamentname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_TournamentName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{248EE655-F1C6-41B5-8BF7-497B32A4F8DE}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3c9d74d9-6223-4e42-a18e-e1c6599eb883}">
+                        <labels>
+                          <label description="Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_startdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="new_startdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b508429d-1adb-4bfc-baa0-7dd3c8753821}">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="new_enddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="new_enddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a76927a-b882-4352-975a-d6a924a9251e}">
+                        <labels>
+                          <label description="Location Name" languagecode="1033" />
+                        </labels>
+                        <control id="new_locationname" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_locationname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2f12169c-238f-40b4-bada-bb2034b5ceaf}">
+                        <labels>
+                          <label description="Address" languagecode="1033" />
+                        </labels>
+                        <control id="new_address" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_address" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0b2cd62e-5ca8-4b7b-898e-e9d87a7c4ff7}">
+                        <labels>
+                          <label description="Latitude" languagecode="1033" />
+                        </labels>
+                        <control id="new_latitude" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="new_latitude" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2c637e62-d9e1-45b9-8a01-32cfa78fc89a}">
+                        <labels>
+                          <label description="Longitude" languagecode="1033" />
+                        </labels>
+                        <control id="new_longitude" classid="{c3efe0c3-0ec6-42be-8349-cbd9079dfd8e}" datafieldname="new_longitude" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3d40a2de-4ebd-42a3-8fc8-9417194076ec}">
+                        <labels>
+                          <label description="Geo Radius" languagecode="1033" />
+                        </labels>
+                        <control id="new_georadius" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="new_georadius" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dabd1488-0ba7-4877-b9c4-4a9d5e53e19a}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="new_status" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_status" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

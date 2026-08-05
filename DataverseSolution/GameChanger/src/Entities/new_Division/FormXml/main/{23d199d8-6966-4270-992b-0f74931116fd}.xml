@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{23d199d8-6966-4270-992b-0f74931116fd}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{C505B31B-95B5-464B-BFDE-F32FD2A54A81}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{0FF090E1-C048-4D63-A153-478639340E60}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{FA48F400-87B5-4D31-94FF-206D08188F50}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="new_divisionname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="new_DivisionName" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{B10E871F-089F-42F8-A737-9DF50C84C99E}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{37180c90-cc78-450c-8cf9-6c7a7c1d45d1}">
+                        <labels>
+                          <label description="Gender" languagecode="1033" />
+                        </labels>
+                        <control id="new_gender" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="new_gender" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{52ca0ce5-7fb5-496f-96f2-f39fb78d31bd}">
+                        <labels>
+                          <label description="Age Group" languagecode="1033" />
+                        </labels>
+                        <control id="new_agegroup" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="new_agegroup" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5425514-ed07-4226-b5ac-b5da608337a9}">
+                        <labels>
+                          <label description="Display Order" languagecode="1033" />
+                        </labels>
+                        <control id="new_displayorder" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="new_displayorder" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ce7fb308-d222-4895-a069-348d7ea5198a}">
+                        <labels>
+                          <label description="Active" languagecode="1033" />
+                        </labels>
+                        <control id="new_active" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="new_active" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
