@@ -420,7 +420,7 @@
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
           <Format>none</Format>
-          <MinValue>-2147483648</MinValue>
+          <MinValue>0</MinValue>
           <MaxValue>2147483647</MaxValue>
           <displaynames>
             <displayname description="Failed Verification Attempts" languagecode="1033" />
