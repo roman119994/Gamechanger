@@ -80,8 +80,9 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-      <RootComponent type="1" schemaName="contact" behavior="2" />
+      <RootComponent type="1" schemaName="contact" behavior="1" />
       <RootComponent type="1" schemaName="new_division" behavior="0" />
+      <RootComponent type="1" schemaName="new_gamechangeruser" behavior="0" />
       <RootComponent type="1" schemaName="new_gamematch" behavior="0" />
       <RootComponent type="1" schemaName="new_judge" behavior="0" />
       <RootComponent type="1" schemaName="new_organization" behavior="0" />
