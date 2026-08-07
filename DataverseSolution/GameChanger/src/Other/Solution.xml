@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26065.171" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26065.171" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26065.00171">
+<ImportExportXml version="9.2.26065.171" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26065.171" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26071.00168">
   <SolutionManifest>
     <UniqueName>GameChanger</UniqueName>
     <LocalizedNames>
@@ -93,6 +93,7 @@
       <RootComponent type="1" schemaName="new_tournamentdivision" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentroster" behavior="0" />
       <RootComponent type="1" schemaName="new_vote" behavior="0" />
+      <RootComponent type="29" id="{e675a670-2492-f111-8075-70a8a5b30651}" behavior="0" />
       <RootComponent type="300" schemaName="new_gamechanger_8d01e" behavior="0" />
       <RootComponent type="9" schemaName="new_competitionlevel" behavior="0" />
       <RootComponent type="9" schemaName="new_gamestatuschoices" behavior="0" />
