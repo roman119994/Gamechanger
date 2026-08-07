@@ -15,13 +15,13 @@
       "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
       "contentVersion": "1.0.0.0",
       "parameters": {
-        "$connections": {
-          "defaultValue": {},
-          "type": "Object"
-        },
         "$authentication": {
           "defaultValue": {},
           "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
         }
       },
       "triggers": {
@@ -31,17 +31,16 @@
           },
           "type": "OpenApiConnectionWebhook",
           "inputs": {
-            "host": {
-              "connectionName": "shared_commondataserviceforapps",
-              "operationId": "SubscribeWebhookTrigger",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-            },
             "parameters": {
               "subscriptionRequest/message": 1,
               "subscriptionRequest/entityname": "contact",
               "subscriptionRequest/scope": 4
             },
-            "authentication": "@parameters('$authentication')"
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
           }
         }
       },
@@ -53,42 +52,39 @@
           },
           "type": "OpenApiConnection",
           "inputs": {
-            "host": {
-              "connectionName": "shared_commondataserviceforapps",
-              "operationId": "ListRecords",
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-            },
             "parameters": {
               "entityName": "new_gamechangerusers",
               "$filter": "_new_contact_value eq @{triggerOutputs()?['body/contactid']}",
               "$top": 1
             },
-            "authentication": "@parameters('$authentication')"
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
           }
         },
         "Condition": {
           "actions": {
             "Add_a_new_row": {
-              "runAfter": {},
               "metadata": {
                 "operationMetadataId": "17325bbb-d32b-49f4-9f63-72c6f88cdf36"
               },
               "type": "OpenApiConnection",
               "inputs": {
-                "host": {
-                  "connectionName": "shared_commondataserviceforapps",
-                  "operationId": "CreateRecord",
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
-                },
                 "parameters": {
                   "entityName": "new_gamechangerusers",
-                  "item/new_Contact@odata.bind": "@triggerOutputs()?['body/contactid']",
+                  "item/new_Contact@odata.bind": "concat('contacts(', triggerOutputs()?['body/contactid'], ')')",
                   "item/new_active": true,
                   "item/new_failedverificationattempts": 0,
                   "item/new_gamechangerusername": "@triggerOutputs()?['body/fullname']",
                   "item/new_phoneverified": false
                 },
-                "authentication": "@parameters('$authentication')"
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
               }
             }
           },
@@ -96,6 +92,9 @@
             "List_rows": [
               "Succeeded"
             ]
+          },
+          "else": {
+            "actions": {}
           },
           "expression": {
             "equals": [
