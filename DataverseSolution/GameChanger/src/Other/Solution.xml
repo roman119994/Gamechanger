@@ -89,10 +89,8 @@
       <RootComponent type="1" schemaName="new_player" behavior="0" />
       <RootComponent type="1" schemaName="new_result" behavior="0" />
       <RootComponent type="1" schemaName="new_team" behavior="0" />
-      <RootComponent type="1" schemaName="new_team1" behavior="0" />
       <RootComponent type="1" schemaName="new_tournament" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentdivision" behavior="0" />
-      <RootComponent type="1" schemaName="new_tournamentdivision1" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentroster" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentteam" behavior="0" />
       <RootComponent type="1" schemaName="new_vote" behavior="0" />
@@ -121,6 +119,14 @@
       <MissingDependency>
         <Required type="1" schemaName="cr668_games" displayName="Games" solution="Active" />
         <Dependent type="300" schemaName="new_gamechanger_8d01e" displayName="GameChanger" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="new_teamname" displayName="Team Name" parentSchemaName="new_team1" parentDisplayName="Team" solution="Active" />
+        <Dependent type="10" schemaName="new_tournamentteam_new_team_new_team1" displayName="new_tournamentteam_new_team_new_team1" parentSchemaName="new_tournamentteam" parentDisplayName="Tournament Team" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="new_tournamentdivisionname" displayName="Tournament Division Name" parentSchemaName="new_tournamentdivision1" parentDisplayName="Tournament Division" solution="Active" />
+        <Dependent type="10" schemaName="new_tournamentteam_new_tournamentdivision_new_tournamentdivision1" displayName="new_tournamentteam_new_tournamentdivision_new_tournamentdivision1" parentSchemaName="new_tournamentteam" parentDisplayName="Tournament Team" />
       </MissingDependency>
       <MissingDependency>
         <Required type="9" schemaName="cr668_bracketside" displayName="Bracket Side" solution="Active" />
