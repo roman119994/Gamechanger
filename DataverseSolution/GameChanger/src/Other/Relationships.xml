@@ -69,6 +69,8 @@
   <EntityRelationship Name="new_tournamentroster_Tournament_new_tournament" />
   <EntityRelationship Name="new_tournamentteam_new_team_new_team1" />
   <EntityRelationship Name="new_tournamentteam_new_tournamentdivision_new_tournamentdivision1" />
+  <EntityRelationship Name="new_tournamentteam_TeamLookup_new_team" />
+  <EntityRelationship Name="new_tournamentteam_TournamentDivisionLookup_new_tournamentdivision" />
   <EntityRelationship Name="new_vote_Division_new_division" />
   <EntityRelationship Name="new_vote_GameMatch_new_gamematch" />
   <EntityRelationship Name="new_vote_Judge_new_judge" />
