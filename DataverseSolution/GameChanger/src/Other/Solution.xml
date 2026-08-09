@@ -123,10 +123,6 @@
         <Dependent type="300" schemaName="new_gamechanger_8d01e" displayName="GameChanger" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="2" schemaName="new_tournamentdivisionname" displayName="Tournament Division Name" parentSchemaName="new_tournamentdivision1" parentDisplayName="Tournament Division" solution="Active" />
-        <Dependent type="10" schemaName="new_tournamentteam_new_tournamentdivision_new_tournamentdivision1" displayName="new_tournamentteam_new_tournamentdivision_new_tournamentdivision1" parentSchemaName="new_tournamentteam" parentDisplayName="Tournament Team" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="9" schemaName="cr668_tournamentstrength" displayName="Tournament Strength" solution="Active" />
         <Dependent type="2" schemaName="cr668_tournamentsstrength" displayName="Tournaments Strength" parentSchemaName="new_tournament" parentDisplayName="Tournament" />
       </MissingDependency>
