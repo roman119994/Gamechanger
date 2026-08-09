@@ -11,7 +11,6 @@
       <grid name="resultset" jump="new_tournamentteamname" select="1" icon="1" preview="1">
         <row name="result" id="new_tournamentteamid">
           <cell name="new_tournamentteamname" width="300" />
-          <cell name="new_tournamentdivision" width="150" />
           <cell name="new_seed" width="150" />
           <cell name="new_status" width="150" />
         </row>
@@ -28,7 +27,6 @@
           <filter type="and">
             <condition attribute="statecode" operator="eq" value="0" />
           </filter>
-          <attribute name="new_tournamentdivision" />
           <attribute name="new_seed" />
           <attribute name="new_status" />
         </entity>

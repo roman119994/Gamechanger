@@ -36,14 +36,6 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{253d3c56-1502-46c3-9ee6-62db7ce6865e}">
-                        <labels>
-                          <label description="" languagecode="1033" />
-                        </labels>
-                        <control id="new_tournamentdivision" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="new_tournamentdivision" />
-                      </cell>
-                    </row>
-                    <row>
                       <cell id="{4da684af-fbb0-487b-81f7-409d35ae820e}">
                         <labels>
                           <label description="" languagecode="1033" />
