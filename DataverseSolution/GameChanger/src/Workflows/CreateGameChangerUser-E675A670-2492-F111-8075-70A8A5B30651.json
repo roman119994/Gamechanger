@@ -74,7 +74,7 @@
               "inputs": {
                 "parameters": {
                   "entityName": "new_gamechangerusers",
-                  "item/new_Contact@odata.bind": "concat('contacts(', triggerOutputs()?['body/contactid'], ')')",
+                  "item/new_Contact@odata.bind": "@concat('contacts(', triggerOutputs()?['body/contactid'], ')')",
                   "item/new_active": true,
                   "item/new_failedverificationattempts": 0,
                   "item/new_gamechangerusername": "@triggerOutputs()?['body/fullname']",

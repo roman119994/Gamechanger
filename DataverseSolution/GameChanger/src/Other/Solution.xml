@@ -89,9 +89,12 @@
       <RootComponent type="1" schemaName="new_player" behavior="0" />
       <RootComponent type="1" schemaName="new_result" behavior="0" />
       <RootComponent type="1" schemaName="new_team" behavior="0" />
+      <RootComponent type="1" schemaName="new_team1" behavior="0" />
       <RootComponent type="1" schemaName="new_tournament" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentdivision" behavior="0" />
+      <RootComponent type="1" schemaName="new_tournamentdivision1" behavior="0" />
       <RootComponent type="1" schemaName="new_tournamentroster" behavior="0" />
+      <RootComponent type="1" schemaName="new_tournamentteam" behavior="0" />
       <RootComponent type="1" schemaName="new_vote" behavior="0" />
       <RootComponent type="29" id="{e675a670-2492-f111-8075-70a8a5b30651}" behavior="0" />
       <RootComponent type="300" schemaName="new_gamechanger_8d01e" behavior="0" />
@@ -118,6 +121,18 @@
       <MissingDependency>
         <Required type="1" schemaName="cr668_games" displayName="Games" solution="Active" />
         <Dependent type="300" schemaName="new_gamechanger_8d01e" displayName="GameChanger" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="9" schemaName="cr668_bracketside" displayName="Bracket Side" solution="Active" />
+        <Dependent type="2" schemaName="cr668_bracketside" displayName="Bracket Side" parentSchemaName="new_gamematch" parentDisplayName="Game Match" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="9" schemaName="cr668_matchslot" displayName="Match Slot" solution="Active" />
+        <Dependent type="2" schemaName="cr668_nextloserslot" displayName="Next Loser Slot" parentSchemaName="new_gamematch" parentDisplayName="Game Match" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="9" schemaName="cr668_matchslot" displayName="Match Slot" solution="Active" />
+        <Dependent type="2" schemaName="cr668_nextwinnerslot" displayName="Next Winner Slot" parentSchemaName="new_gamematch" parentDisplayName="Game Match" />
       </MissingDependency>
       <MissingDependency>
         <Required type="9" schemaName="cr668_tournamentstrength" displayName="Tournament Strength" solution="Active" />
