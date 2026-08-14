@@ -1,0 +1,246 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_e2779"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "d7cc52a1-50cb-4355-b356-bf7b3040131d"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Input",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Tournament Division ID",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_rows": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "721d88d5-0690-4b79-9fe3-97ccc9373dc8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "new_tournamentteams",
+              "$filter": "_new_tournamentdivision_value eq@{triggerBody()['text']}",
+              "$orderby": "new_seed asc"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Team_Count": {
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "830307ae-750e-45ac-829c-67fb7d18e73a"
+          },
+          "type": "Compose",
+          "inputs": "length(outputs('List_rows')?['body/value'])"
+        },
+        "Bracket_Size": {
+          "runAfter": {
+            "Team_Count": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "eeefb155-b423-4428-9bed-bb272d7a5347"
+          },
+          "type": "Compose",
+          "inputs": "if(\n  lessOrEquals(outputs('Team_Count'),2),2,\n  if(\n    lessOrEquals(outputs('Team_Count'),4),4,\n    if(\n      lessOrEquals(outputs('Team_Count'),8),8,\n      if(\n        lessOrEquals(outputs('Team_Count'),16),16,\n        if(\n          lessOrEquals(outputs('Team_Count'),32),32,\n          if(\n            lessOrEquals(outputs('Team_Count'),64),64,\n            128\n          )\n        )\n      )\n    )\n  )\n)"
+        },
+        "First_Round_Match_Count": {
+          "runAfter": {
+            "Bracket_Size": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6c91b74e-b25e-480f-a7dc-92159d0a992d"
+          },
+          "type": "Compose",
+          "inputs": "div(outputs('Bracket_Size'),2)"
+        },
+        "Initialize_variable": {
+          "runAfter": {
+            "First_Round_Match_Count": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b9e2c56b-e788-449a-ba1e-a6e40fc32a3c"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "MatchIndex",
+                "type": "integer",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Do_until": {
+          "actions": {
+            "Team_1_Index": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "ea0f2e7f-33cd-4e31-b8c2-879598d5eb44"
+              },
+              "type": "Compose",
+              "inputs": "mul(variables('MatchIndex'),2)"
+            },
+            "Team_2_Index": {
+              "runAfter": {
+                "Team_1_Index": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5e44a789-3e41-404f-b516-4e9aadb5e1a0"
+              },
+              "type": "Compose",
+              "inputs": "add(mul(variables('MatchIndex'),2),1)"
+            },
+            "Team_1": {
+              "runAfter": {
+                "Team_2_Index": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0c9f6539-d676-40c2-a58d-85585f05c03d"
+              },
+              "type": "Compose",
+              "inputs": "first(skip(outputs('List_rows')?['body/value'], outputs('Team_1_Index')))"
+            },
+            "Team_2": {
+              "runAfter": {
+                "Team_1": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "dd46629c-35bf-45b2-aade-59e8201fa49e"
+              },
+              "type": "Compose",
+              "inputs": "first(skip(outputs('List_rows')?['body/value'], outputs('Team_2_Index')))"
+            },
+            "Add_a_new_row": {
+              "runAfter": {
+                "Team_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ef361d99-a8df-4e48-aed3-ea2d21d88fef"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "new_gamematchs",
+                  "item/new_gamename": "@concat('Round 1 - Match ', string(add(variables('MatchIndex'),1)))",
+                  "item/cr668_bracketroundnumber": 1,
+                  "item/new_matchnumber": "@add(variables('MatchIndex'),1)",
+                  "item/new_Team1@odata.bind": "@outputs('Team_1')?['_new_teamlookup_value']",
+                  "item/new_Team2@odata.bind": "@outputs('Team_2')?['_new_teamlookup_value']",
+                  "item/new_TournamentDivision@odata.bind": "@triggerBody()['text']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            },
+            "Increment_variable": {
+              "runAfter": {
+                "Add_a_new_row": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ca91feba-6ed9-4b0c-b90c-43ec6554c47d"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "MatchIndex",
+                "value": 1
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "expression": "@equals(variables('MatchIndex'), 'outputs(''First_Round_Match_Count'')')",
+          "limit": {
+            "count": 60,
+            "timeout": "PT1H"
+          },
+          "metadata": {
+            "operationMetadataId": "c208267f-5838-4577-bd39-a1046b769cd6"
+          },
+          "type": "Until"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

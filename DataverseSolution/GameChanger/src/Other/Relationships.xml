@@ -47,6 +47,7 @@
   <EntityRelationship Name="new_gamematch_Team1_new_team" />
   <EntityRelationship Name="new_gamematch_Team2_new_team" />
   <EntityRelationship Name="new_gamematch_Tournament_new_tournament" />
+  <EntityRelationship Name="new_gamematch_TournamentDivision_new_tournamentdivision" />
   <EntityRelationship Name="new_gamematch_WinningTeam_new_team" />
   <EntityRelationship Name="new_judge_Tournament_new_tournament" />
   <EntityRelationship Name="new_result_Division_new_division" />
@@ -57,6 +58,7 @@
   <EntityRelationship Name="new_team_Tournament_new_tournament" />
   <EntityRelationship Name="new_TournamentDivision_new_division" />
   <EntityRelationship Name="new_TournamentDivision_new_tournament" />
+  <EntityRelationship Name="new_tournamentdivision_TournamentDivision_new_tournamentdivision" />
   <EntityRelationship Name="new_tournamentroster_Division_new_division" />
   <EntityRelationship Name="new_tournamentroster_Player_new_player" />
   <EntityRelationship Name="new_tournamentroster_Team_new_team" />
