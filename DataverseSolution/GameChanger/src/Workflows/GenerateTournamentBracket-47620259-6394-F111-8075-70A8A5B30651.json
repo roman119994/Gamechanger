@@ -65,7 +65,7 @@
             },
             "parameters": {
               "entityName": "new_tournamentteams",
-              "$filter": "_new_tournamentdivision_value eq@{triggerBody()['text']}",
+              "$filter": "_new_tournamentdivision_value eq @{triggerBody()['text']}",
               "$orderby": "new_seed asc"
             },
             "authentication": {
@@ -84,7 +84,7 @@
             "operationMetadataId": "830307ae-750e-45ac-829c-67fb7d18e73a"
           },
           "type": "Compose",
-          "inputs": "length(outputs('List_rows')?['body/value'])"
+          "inputs": "@length(outputs('List_rows')?['body/value'])"
         },
         "Bracket_Size": {
           "runAfter": {
@@ -96,7 +96,7 @@
             "operationMetadataId": "eeefb155-b423-4428-9bed-bb272d7a5347"
           },
           "type": "Compose",
-          "inputs": "if(\n  lessOrEquals(outputs('Team_Count'),2),2,\n  if(\n    lessOrEquals(outputs('Team_Count'),4),4,\n    if(\n      lessOrEquals(outputs('Team_Count'),8),8,\n      if(\n        lessOrEquals(outputs('Team_Count'),16),16,\n        if(\n          lessOrEquals(outputs('Team_Count'),32),32,\n          if(\n            lessOrEquals(outputs('Team_Count'),64),64,\n            128\n          )\n        )\n      )\n    )\n  )\n)"
+          "inputs": "@if(lessOrEquals(outputs('Team_Count'),2),2,if(lessOrEquals(outputs('Team_Count'),4),4,if(lessOrEquals(outputs('Team_Count'),8),8,if(lessOrEquals(outputs('Team_Count'),16),16,if(lessOrEquals(outputs('Team_Count'),32),32,if(lessOrEquals(outputs('Team_Count'),64),64,128))))))"
         },
         "First_Round_Match_Count": {
           "runAfter": {
@@ -108,7 +108,7 @@
             "operationMetadataId": "6c91b74e-b25e-480f-a7dc-92159d0a992d"
           },
           "type": "Compose",
-          "inputs": "div(outputs('Bracket_Size'),2)"
+          "inputs": "@div(outputs('Bracket_Size'),2)"
         },
         "Initialize_variable": {
           "runAfter": {
@@ -138,7 +138,7 @@
                 "operationMetadataId": "ea0f2e7f-33cd-4e31-b8c2-879598d5eb44"
               },
               "type": "Compose",
-              "inputs": "mul(variables('MatchIndex'),2)"
+              "inputs": "@mul(variables('MatchIndex'),2)"
             },
             "Team_2_Index": {
               "runAfter": {
@@ -150,7 +150,7 @@
                 "operationMetadataId": "5e44a789-3e41-404f-b516-4e9aadb5e1a0"
               },
               "type": "Compose",
-              "inputs": "add(mul(variables('MatchIndex'),2),1)"
+              "inputs": "@add(mul(variables('MatchIndex'),2),1)"
             },
             "Team_1": {
               "runAfter": {
@@ -162,7 +162,7 @@
                 "operationMetadataId": "0c9f6539-d676-40c2-a58d-85585f05c03d"
               },
               "type": "Compose",
-              "inputs": "first(skip(outputs('List_rows')?['body/value'], outputs('Team_1_Index')))"
+              "inputs": "@first(skip(outputs('List_rows')?['body/value'],outputs('Team_1_Index')))"
             },
             "Team_2": {
               "runAfter": {
@@ -174,7 +174,7 @@
                 "operationMetadataId": "dd46629c-35bf-45b2-aade-59e8201fa49e"
               },
               "type": "Compose",
-              "inputs": "first(skip(outputs('List_rows')?['body/value'], outputs('Team_2_Index')))"
+              "inputs": "@first(skip(outputs('List_rows')?['body/value'],outputs('Team_2_Index')))"
             },
             "Add_a_new_row": {
               "runAfter": {
@@ -197,9 +197,9 @@
                   "item/new_gamename": "@concat('Round 1 - Match ', string(add(variables('MatchIndex'),1)))",
                   "item/cr668_bracketroundnumber": 1,
                   "item/new_matchnumber": "@add(variables('MatchIndex'),1)",
-                  "item/new_Team1@odata.bind": "@outputs('Team_1')?['_new_teamlookup_value']",
-                  "item/new_Team2@odata.bind": "@outputs('Team_2')?['_new_teamlookup_value']",
-                  "item/new_TournamentDivision@odata.bind": "@triggerBody()['text']"
+                  "item/new_Team1@odata.bind": "@concat('new_teams(',outputs('Team_1')?['_new_teamlookup_value'],')')",
+                  "item/new_Team2@odata.bind": "@concat('new_teams(',outputs('Team_2')?['_new_teamlookup_value'],')')",
+                  "item/new_TournamentDivision@odata.bind": "@concat('new_tournamentdivisions(',triggerBody()?['text'],')')"
                 },
                 "authentication": {
                   "type": "Raw",
@@ -228,7 +228,7 @@
               "Succeeded"
             ]
           },
-          "expression": "@equals(variables('MatchIndex'), 'outputs(''First_Round_Match_Count'')')",
+          "expression": "@equals(variables('MatchIndex'), outputs('First_Round_Match_Count'))",
           "limit": {
             "count": 60,
             "timeout": "PT1H"
