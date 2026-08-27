@@ -65,7 +65,7 @@
             },
             "parameters": {
               "entityName": "new_tournamentteams",
-              "$filter": "_new_tournamentdivision_value eq @{triggerBody()['text']}",
+              "$filter": "_new_tournamentdivisionlookup_value eq @{triggerBody()['text']}",
               "$orderby": "new_seed asc"
             },
             "authentication": {
