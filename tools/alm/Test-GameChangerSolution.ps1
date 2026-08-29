@@ -100,14 +100,15 @@ if ($Pack) {
         Remove-Item -LiteralPath $packagePath -Force
     }
 
-    & $pacPath solution pack `
+    $packOutput = @(& $pacPath solution pack `
         --zipfile $packagePath `
         --folder $sourceRoot `
         --packagetype Unmanaged `
         --log $packLog `
-        --errorlevel Warning
-    if ($LASTEXITCODE -ne 0) {
-        throw "PAC solution pack failed with exit code $LASTEXITCODE. Review $packLog"
+        --errorlevel Warning 2>&1)
+    $packExitCode = $LASTEXITCODE
+    if ($packExitCode -ne 0) {
+        throw "PAC solution pack failed with exit code $packExitCode. Review $packLog`n$($packOutput -join [Environment]::NewLine)"
     }
     if (-not (Test-Path -LiteralPath $packagePath -PathType Leaf)) {
         throw "PAC reported success but the package was not created: $packagePath"
