@@ -20,3 +20,10 @@ packages/
 
 # Compiled assemblies
 *.pfx
+
+# Local credentials and authentication artifacts
+.secrets/
+*.key
+*.token.json
+*.clientsecret*
+config/*.local.json
