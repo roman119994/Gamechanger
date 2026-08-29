@@ -27,3 +27,6 @@ packages/
 *.token.json
 *.clientsecret*
 config/*.local.json
+
+# Generated validation and Solution Checker output
+.artifacts/
