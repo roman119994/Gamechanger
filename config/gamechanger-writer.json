@@ -1,0 +1,40 @@
+{
+  "environmentUrl": "https://orgfc093633.crm.dynamics.com",
+  "organizationId": "4888017d-8bed-f011-aa21-6045bd081412",
+  "tenantId": "c01ce802-f955-41e9-adb5-035c8b490560",
+  "clientId": "7011c56a-2520-4ade-84b5-feb6c614b499",
+  "certificateThumbprint": "BA25236FA9F89897502ACD2D0F653D15C2BA51DC",
+  "testPrefix": "[CODEX-TEST]",
+  "writeTables": [
+    "new_division",
+    "new_gamematch",
+    "new_gamechangeruser",
+    "new_judge",
+    "new_organization",
+    "new_player",
+    "new_result",
+    "new_team",
+    "new_tournament",
+    "new_tournamentdivision",
+    "new_tournamentroster",
+    "new_tournamentteam",
+    "new_vote",
+    "cr668_games"
+  ],
+  "allowedTables": [
+    "new_division",
+    "new_gamematch",
+    "new_gamechangeruser",
+    "new_judge",
+    "new_organization",
+    "new_player",
+    "new_result",
+    "new_team",
+    "new_tournament",
+    "new_tournamentdivision",
+    "new_tournamentroster",
+    "new_tournamentteam",
+    "new_vote",
+    "cr668_games"
+  ]
+}
