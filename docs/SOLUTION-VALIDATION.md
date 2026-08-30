@@ -12,6 +12,18 @@ Run:
 
 This parses every exported XML and JSON file, checks required solution paths, and confirms that the bracket flow contains `_new_tournamentdivisionlookup_value`.
 
+## Offline bracket-flow inspection
+
+Run:
+
+```powershell
+& .\tools\alm\Test-GameChangerFlow.ps1
+```
+
+This parses the exported Generate Tournament Bracket flow and reports its trigger, top-level actions, connection reference, source and destination tables, List rows filter, and Tournament Division lookup binding. It fails if the committed flow no longer uses `_new_tournamentdivisionlookup_value`, `new_tournamentteams`, `new_gamematchs`, or the expected `new_tournamentdivisions(...)` binding.
+
+The script operates only on exported JSON. It does not contact Power Platform, run or alter a flow, or change Dataverse records.
+
 To also create an unmanaged ZIP locally:
 
 ```powershell
